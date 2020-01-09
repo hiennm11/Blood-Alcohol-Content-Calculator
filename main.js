@@ -12,13 +12,13 @@ function click(){
 				
 		textr.innerHTML = `<p>Nồng độ cồn của bạn là <span class="text-danger">~${blood} mg/100ml máu</span>,
 							tương đương <span class="text-danger">~${breathalyzer} mg/l khí thở </span> !</p>
-							<p>Nồng độ sẽ trở về 0 sau : <span class="text-danger">~${(bac/0.015).toFixed(1)} tiếng</span></p><br>`;
+							<p>Nồng độ sẽ trở về 0 sau : <span class="text-danger">~${(bac/0.015).toFixed(1)} tiếng.</span></p><br>`;
 		if(breathalyzer > 0){					
 			if(breathalyzer <= 0.25 ){
 				textr.innerHTML += `<p class="text-danger text-center">!!! MỨC PHẠT !!!</p>
-									<p>Ô tô:<span class="text-primary"> 06 - 08 triệu đồng;</span><span class="text-danger"> Tước GPLX từ 10 - 12 tháng</span></p>
+									<p>Ô tô:<span class="text-primary"> 06 - 08 triệu đồng;</span><span class="text-danger"> Tước GPLX từ 10 - 12 tháng</span>.</p>
 
-									<p>Xe máy:<span class="text-primary"> 02 - 03 triệu đồng;</span><span class="text-danger"> Tước GPLX từ 10 - 12 tháng</span></p>
+									<p>Xe máy:<span class="text-primary"> 02 - 03 triệu đồng;</span><span class="text-danger"> Tước GPLX từ 10 - 12 tháng</span>.</p>
 
 									<p>Xe đạp, xe đạp điện:<span class="text-primary"> 80.000 - 100.000 đồng</span></p>`;
 			}else if(breathalyzer <= 0.40){
@@ -27,14 +27,14 @@ function click(){
 
 									<p>Xe máy:<span class="text-primary"> 04 - 05 triệu đồng;</span><span class="text-danger"> Tước GPLX từ 16 - 18 tháng</span></p>
 									
-									<p>Xe đạp, xe đạp điện:<span class="text-primary"> 200.000 - 400.000 đồng</span></p>`;
+									<p>Xe đạp, xe đạp điện:<span class="text-primary"> 200.000 - 400.000 đồng</span>.</p>`;
 			}else if(breathalyzer > 0.40){
 				textr.innerHTML += `<p class="text-danger text-center">!!! MỨC PHẠT !!!</p>
-									<p>Ô tô:<span class="text-primary"> 30 - 40 triệu đồng;</span><span class="text-danger"> Tước GPLX 22 - 24 tháng</span></p>
+									<p>Ô tô:<span class="text-primary"> 30 - 40 triệu đồng;</span><span class="text-danger"> Tước GPLX 22 - 24 tháng</span>.</p>
 
-									<p>Xe máy:<span class="text-primary"> 06 - 08 triệu đồng;</span><span class="text-danger"> Tước GPLX 22 - 24 tháng</span></p>
+									<p>Xe máy:<span class="text-primary"> 06 - 08 triệu đồng;</span><span class="text-danger"> Tước GPLX 22 - 24 tháng</span>.</p>
 									
-									<p>Xe đạp:<span class="text-primary"> 600 - 800.000 đồng</span></p>`;
+									<p>Xe đạp:<span class="text-primary"> 600 - 800.000 đồng</span>.</p>`;
 			}
 		}		
 	}else{
@@ -91,3 +91,4 @@ function updateLitre(val){
 }
 
 document.getElementById('result').addEventListener("click", click);
+document.getElementById('result').addEventListener("keypress", click);
