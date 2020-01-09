@@ -90,10 +90,13 @@ function updateLitre(val){
 	e.value = parseFloat(val*sl).toFixed(2);	
 }
 
-document.getElementById('result').addEventListener("click", click);
-document.getElementById('result').addEventListener("keypress", function(e){
-if(e.characterCode == 13)
-{
-    click();
+document.body.onkeydown = function(event){
+    event = event || window.event;
+    var keycode = event.charCode || event.keyCode;
+    if(keycode === 13){
+        document.getElementById('result').click();
+    }
 }
-});
+
+document.getElementById('result').addEventListener("click", click);
+

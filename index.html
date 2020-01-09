@@ -1,146 +1,146 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+				<!-- Bootstrap CSS -->
+				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Blood Alcohol Content Calculator</title>
-  </head>
-  <body>
-    <div class="jumbotron text-center">
-		<h2>Blood Alcohol Content Calculator</h2>
-	</div>
+					<title>Blood Alcohol Content Calculator</title>
+				</head>
+				<body>
+					<div class="jumbotron text-center">
+						<h2>Blood Alcohol Content Calculator</h2>
+					</div>
 
-<div class="container">
-   <div class="row">
-     <div class="form-group col-sm-4">
-        <label for="genre">Giới tính:</label>
-        <select class="form-control" id="genre">			
-			<option value="Nam">Nam</option>
-			<option value="Nu">Nữ</option>        
-        </select>
-      </div>
-	  
-	  <div class="form-group col-sm-4">
-        <label for="weight">Cân nặng:</label>
-         <div class="input-group">
-         	<input type="number" class="form-control" id="weight" placeholder="Nhập cân nặng" min="0">
-            <div class="input-group-append">
-              <span class="input-group-text">kg</span>
-            </div>
-         </div>
-      </div>
-	  
-      <div class="form-group col-sm-4">
-        <label for="type">Loại bia:</label>
-        <select class="form-control" id="type" onchange="updateAC(this.value)">
-			<option value="0">Chọn loại bia</option>
-			<option value="1">Heineken</option>
-			<option value="2">Tiger</option>
-			<option value="3">Tiger Crystal</option>
-			<option value="4">Saigon Special</option>
-			<option value="5">Saigon Export</option>
-			<option value="6">Saigon Lager</option>
-			<option value="7">333</option>
-			<option value="8">Đồ uống có cồn khác</option>			
-        </select>
-      </div>
-	  <!-- <div style="padding-top: 35px;">		 -->
-		<!-- <span>hoặc</span> -->
-	  <!-- </div> -->
-	  <div class="form-group col-sm-4">
-        <label for="acDrinks">Nồng độ:</label>
-        <div class="input-group">
-			<input type="number" class="form-control" id="acDrinks" disabled placeholder="Độ cồn theo đơn vị %" min="0">
-			<div class="input-group-append">
-                <span class="input-group-text">%</span>
-			</div>
-        </div>
-      </div>   
-	  
-      
-	  <div class="form-group col-sm-4">
-        <div class="row">
-			<div class="col-6">
-				<label for="quantity">Số lượng:</label>
-				<div class="input-group">
-					<input type="number" class="form-control" id="quantity" onchange="updateLitre(this.value)" placeholder="Số lon/chai đã uống" min="0">			
-				</div>
-			</div>
-			<div class="col-6">
-				<label for="quantityType">Loại:</label>
-				<select class="form-control" id="quantityType">			
-				<option value="0">Lon</option>
-				<option value="1">Chai</option>        
-        </select>
-			</div>
-		</div>
-      </div>    
-	  
-      <div class="form-group col-sm-4">
-        <label for="litre">Số lít:</label>
-        <div class="input-group">
-			<input type="number" class="form-control" id="litre" placeholder="Số lít đã uống" min="0">
-			<div class="input-group-append">
-                <span class="input-group-text">lít</span>
-			</div>
-        </div>
-      </div>    
-  </div>
-  
-  <button type="button" id="result" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal">Tính</button>
+					<div class="container">
+						<div class="row">
+							<div class="form-group col-sm-4">
+								<label for="genre">Giới tính:</label>
+								<select class="form-control" id="genre">			
+									<option value="Nam">Nam</option>
+									<option value="Nu">Nữ</option>        
+								</select>
+							</div>
 
-<!-- The Modal -->
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title text-danger">Thông báo</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-</div>
-    
-	<footer class="page-footer font-small blue pt-4">
-	<p class="text-warning">The results on this page are for reference only.</p>
-	<div>Nguồn :</div>
-		<div>
-			<a href="https://www.wikihow.com/Calculate-Blood-Alcohol-Content-(Widmark-Formula)" target="_blank"> 
+							<div class="form-group col-sm-4">
+								<label for="weight">Cân nặng:</label>
+								<div class="input-group">
+									<input type="number" class="form-control" id="weight" placeholder="Nhập cân nặng" min="0">
+										<div class="input-group-append">
+											<span class="input-group-text">kg</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group col-sm-4">
+									<label for="type">Loại bia:</label>
+									<select class="form-control" id="type" onchange="updateAC(this.value)">
+										<option value="0">Chọn loại bia</option>
+										<option value="1">Heineken</option>
+										<option value="2">Tiger</option>
+										<option value="3">Tiger Crystal</option>
+										<option value="4">Saigon Special</option>
+										<option value="5">Saigon Export</option>
+										<option value="6">Saigon Lager</option>
+										<option value="7">333</option>
+										<option value="8">Đồ uống có cồn khác</option>			
+									</select>
+								</div>
+								<!-- <div style="padding-top: 35px;">		 -->
+								<!-- <span>hoặc</span> -->
+								<!-- </div> -->
+								<div class="form-group col-sm-4">
+									<label for="acDrinks">Nồng độ:</label>
+									<div class="input-group">
+										<input type="number" class="form-control" id="acDrinks" disabled placeholder="Độ cồn theo đơn vị %" min="0">
+											<div class="input-group-append">
+												<span class="input-group-text">%</span>
+											</div>
+										</div>
+									</div>   
+
+
+									<div class="form-group col-sm-4">
+										<div class="row">
+											<div class="col-6">
+												<label for="quantity">Số lượng:</label>
+												<div class="input-group">
+													<input type="number" class="form-control" id="quantity" onchange="updateLitre(this.value)" placeholder="Số lon/chai đã uống" min="0">			
+													</div>
+												</div>
+												<div class="col-6">
+													<label for="quantityType">Loại:</label>
+													<select class="form-control" id="quantityType">			
+														<option value="0">Lon</option>
+														<option value="1">Chai</option>        
+													</select>
+												</div>
+											</div>
+										</div>    
+
+										<div class="form-group col-sm-4">
+											<label for="litre">Số lít:</label>
+											<div class="input-group">
+												<input type="number" class="form-control" id="litre" placeholder="Số lít đã uống" min="0">
+													<div class="input-group-append">
+														<span class="input-group-text">lít</span>
+													</div>
+												</div>
+											</div>    
+										</div>
+
+										<button type="button" id="result" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal">Tính</button>
+
+										<!-- The Modal -->
+										<div class="modal fade" id="myModal">
+											<div class="modal-dialog">
+												<div class="modal-content">
+
+													<!-- Modal Header -->
+													<div class="modal-header">
+														<h4 class="modal-title text-danger">Thông báo</h4>
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+													</div>
+
+													<!-- Modal body -->
+													<div class="modal-body">
+
+													</div>
+
+													<!-- Modal footer -->
+													<div class="modal-footer">
+														<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+													</div>
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<footer class="page-footer font-small blue pt-4">
+										<p class="text-warning">The results on this page are for reference only.</p>
+										<div>Nguồn :</div>
+										<div>
+											<a href="https://www.wikihow.com/Calculate-Blood-Alcohol-Content-(Widmark-Formula)" target="_blank"> 
 				Blood alcohol content formula
-			</a>
-		</div>
-		<div>
-			<a href="https://soha.vn/3-muc-phat-nong-do-con-voi-nguoi-dieu-khien-o-to-xe-may-xe-dap-tu-2020-20200103150120701.htm" target="_blank">
+											</a>
+										</div>
+										<div>
+											<a href="https://soha.vn/3-muc-phat-nong-do-con-voi-nguoi-dieu-khien-o-to-xe-may-xe-dap-tu-2020-20200103150120701.htm" target="_blank">
 				3 mức phạt nồng độ cồn với người điều khiển ô tô, xe máy, xe đạp từ 2020
-			</a>
-		</div>
-		<div class="footer-copyright text-center py-3">©Hiền 2020</div>
-	</footer>
-	
-	<!-- Main JavaScript -->
-	<script src="main.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
-</html>
+											</a>
+										</div>
+										<div class="footer-copyright text-center py-3">©Hiền 2020</div>
+									</footer>
+
+									<!-- Main JavaScript -->
+									<script src="main.js"></script>
+									<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+									<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+									<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+									<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+								</body>
+							</html>
