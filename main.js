@@ -91,4 +91,9 @@ function updateLitre(val){
 }
 
 document.getElementById('result').addEventListener("click", click);
-document.getElementById('result').addEventListener("keypress", click);
+document.getElementById('result').addEventListener("keypress", function(e){
+if(e.characterCode == 13)
+{
+    click();
+}
+});
